@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" file="unittest_/test_mydict.py" name="unittest_.test_mydict.TestDict-20191206161116" skipped="1" tests="5" time="0.001" timestamp="2019-12-06T16:11:16">
+	<testcase classname="unittest_.test_mydict.TestDict" file="unittest_/test_mydict.py" line="21" name="test_attr" time="0.000" timestamp="2019-12-06T16:11:16">
+		<system-out>
+<![CDATA[setup test case
+teardown test case
+]]>		</system-out>
+		<system-err>
+<![CDATA[]]>		</system-err>
+	</testcase>
+	<testcase classname="unittest_.test_mydict.TestDict" file="unittest_/test_mydict.py" line="8" name="test_init" time="0.000" timestamp="2019-12-06T16:11:16">
+		<system-out>
+<![CDATA[setup test case
+teardown test case
+]]>		</system-out>
+		<system-err>
+<![CDATA[]]>		</system-err>
+	</testcase>
+	<testcase classname="unittest_.test_mydict.TestDict" file="unittest_/test_mydict.py" line="15" name="test_key" time="0.000" timestamp="2019-12-06T16:11:16">
+		<system-out>
+<![CDATA[setup test case
+teardown test case
+]]>		</system-out>
+		<system-err>
+<![CDATA[]]>		</system-err>
+	</testcase>
+	<testcase classname="unittest_.test_mydict.TestDict" file="unittest_/test_mydict.py" line="27" name="test_keyerror" time="0.000" timestamp="2019-12-06T16:11:16">
+		<system-out>
+<![CDATA[setup test case
+teardown test case
+]]>		</system-out>
+		<system-err>
+<![CDATA[]]>		</system-err>
+	</testcase>
+	<testcase classname="unittest_.test_mydict.TestDict" file="unittest_/test_mydict.py" line="32" name="test_attrerror" time="0.000" timestamp="2019-12-06T16:11:16">
+		<skipped message="this test case will be skipped" type="skip"/>
+		<system-out>
+<![CDATA[]]>		</system-out>
+		<system-err>
+<![CDATA[]]>		</system-err>
+	</testcase>
+</testsuite>

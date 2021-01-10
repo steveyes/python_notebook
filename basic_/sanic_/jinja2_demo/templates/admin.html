@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="../static/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+
+
+<script>
+    document.write("<h1>chekawa后台管理系统</h1>");
+</script>
+
+<p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+
+<input id="demo" type="text">
+
+<script>
+    function numCheck() {
+        let xx = document.getElementById("demo").value;
+        if (xx == "" || isNaN(xx)) {
+            alert("Not Numeric");
+        } else {
+            alert("Numeric")
+        }
+
+    }
+</script>
+
+<button type="button" onclick="numCheck()">数字校验</button>
+
+</body>
+</html>

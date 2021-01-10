@@ -1,0 +1,6 @@
+pyautogui
+selenium
+pywin32
+win32gui
+win32con
+win32com

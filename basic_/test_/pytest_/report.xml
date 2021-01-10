@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="0" failures="2" name="pytest" skipped="0" tests="5" time="0.056"><testcase classname="test_class.TestClassOne" file="test_class.py" line="1" name="test_one" time="0.001"></testcase><testcase classname="test_class.TestClassOne" file="test_class.py" line="5" name="test_two" time="0.001"><failure message="AssertionError: assert False
+ +  where False = hasattr(&apos;hello&apos;, &apos;check&apos;)">self = &lt;howto.test_.pytest_example.test_class.TestClassOne object at 0x7fdb98c02630&gt;
+
+    def test_two(self):
+        x = &quot;hello&quot;
+&gt;       assert hasattr(x, &apos;check&apos;)
+E       AssertionError: assert False
+E        +  where False = hasattr(&apos;hello&apos;, &apos;check&apos;)
+
+test_class.py:8: AssertionError</failure></testcase><testcase classname="test_class.TestClassTwo" file="test_class.py" line="11" name="test_one" time="0.001"></testcase><testcase classname="test_class.TestClassTwo" file="test_class.py" line="15" name="test_two" time="0.001"><failure message="AssertionError: assert False
+ +  where False = hasattr(&apos;apple&apos;, &apos;check&apos;)">self = &lt;howto.test_.pytest_example.test_class.TestClassTwo object at 0x7fdb98c02828&gt;
+
+    def test_two(self):
+        x = &quot;apple&quot;
+&gt;       assert hasattr(x, &apos;check&apos;)
+E       AssertionError: assert False
+E        +  where False = hasattr(&apos;apple&apos;, &apos;check&apos;)
+
+test_class.py:18: AssertionError</failure></testcase><testcase classname="test_func_add1" file="test_func_add1.py" line="7" name="test_add1" time="0.001"></testcase></testsuite>

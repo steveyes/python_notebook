@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/7816363/if-a-vs-if-a-is-not-none/30863279

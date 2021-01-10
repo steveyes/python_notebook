@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue course</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon-16x16.png">
+    <link rel="manifest" href="../static/site.webmanifest">
+    <script type="text/javascript" src="../js/index.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../js/vue.js" charset="utf-8"></script>
+    <style type="text/css">
+        .red {
+            color: red;
+        }
+
+        .blue {
+            color: blue;
+            font-size: 100px;
+        }
+
+        .active {
+            background: #ff0000;
+        }
+
+        .test {
+            font-size: 30px;
+        }
+
+        .green {
+            color: #00ff00;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <test></test>
+
+    <div>
+        <span v-once>{{ message }}</span>
+    </div>
+    <div>
+        <span v-once>{{ msg }}</span>
+    </div>
+    <div>
+        <span v-once>{{ a }}</span>
+    </div>
+    <p>Using mustaches: {{ rawHtml }}</p>
+    <p v-html="rawHtml">Using v-html directive</p>
+    <div v-bind:class="color">testing...</div>
+    <p>{{ number + 1 }}</p>
+    <p>{{ ok ? 'YES' : 'NO' }}</p>
+    <p>{{ message.split('').reverse().join('') }}</p>
+    <p v-if="seen">now you see me</p>
+    <a v-bind:href="url">google</a>
+    <div @click="click1">
+        <div @click.stop="click2">
+            click me
+        </div>
+    </div>
+    <div class="test"
+         v-bind:class="{ active: isActive, green: isGreen }"
+         style="width: 200px; height: 200px; text-align: center; line-height: 200px;">
+        hi vue
+    </div>
+    <div
+            :style="{color: color, fontSize:size}">
+        Hi Vue
+    </div>
+
+    <div v-if="type === 'A'">A</div>
+    <div v-else-if="type==='B'">B</div>
+    <div v-else-if="type==='C'">C</div>
+    <div v-else>Not [ABC]</div>
+    <h1 v-show="ok">Hello v-show</h1>
+
+    <ul id="example-1">
+        <li v-for="item, index in items" :key="index">
+            {{ index }} - {{ item.message }}
+        </li>
+    </ul>
+
+    <ol>
+        <li v-for="value, key in object" :key="key">
+            {{ key }} - {{ value }}
+        </li>
+    </ol>
+
+    <div id="example-2">
+        <button v-on:click="counter += 1">counter: {{ counter }}</button>
+        <button v-on:click="greet('abc', $event)">Greet</button>
+    </div>
+
+    <div id="app9">
+        <div id="example-9">
+            <input v-model="message" placeholder="edit me">
+            <p>Message is : {{ message }}</p>
+        </div>
+        <div>
+            <textarea v-model="msg" placeholder="add multiple lines"></textarea>
+            <p style="white-space: pre-line;">{{ msg }}</p>
+        </div>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+        <label for="jack">Jack</label>
+        <input type="checkbox" id="john" value="John" v-model="checkedNames">
+        <label for="john">John</label>
+        <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+        <label for="mike">Mike</label>
+        <br>
+        <span>Checked names: {{ checkedNames }}</span>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <input type="radio" id="one" value="One" v-model="picked">
+        <label for="one">One</label>
+        <br>
+        <input type="radio" id="two" value="Two" v-model="picked">
+        <label for="two">Two</label>
+        <br>
+        <span>Picked: {{ picked }}</span>
+        <button type="button" @click="submit">submit</button>
+        <button-counter title="title1: " @clicknow="clicknow"></button-counter>
+        <button-counter title="title2: "></button-counter>
+    </div>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="1" file="coverage_/test_app.py" name="coverage_.test_app.TestApp-20191206161116" skipped="0" tests="4" time="0.004" timestamp="2019-12-06T16:11:16">
+	<testcase classname="coverage_.test_app.TestApp" file="coverage_/test_app.py" line="18" name="test_add" time="0.003" timestamp="2019-12-06T16:11:16">
+		<system-out>
+<![CDATA[]]>		</system-out>
+		<system-err>
+<![CDATA[]]>		</system-err>
+	</testcase>
+	<testcase classname="coverage_.test_app.TestApp" file="coverage_/test_app.py" line="33" name="test_divide" time="0.000" timestamp="2019-12-06T16:11:16">
+		<system-out>
+<![CDATA[]]>		</system-out>
+		<system-err>
+<![CDATA[]]>		</system-err>
+	</testcase>
+	<testcase classname="coverage_.test_app.TestApp" file="coverage_/test_app.py" line="23" name="test_subtract" time="0.000" timestamp="2019-12-06T16:11:16">
+		<system-out>
+<![CDATA[]]>		</system-out>
+		<system-err>
+<![CDATA[]]>		</system-err>
+	</testcase>
+	<testcase classname="coverage_.test_app.TestApp" file="coverage_/test_app.py" line="28" name="test_multiple" time="0.000" timestamp="2019-12-06T16:11:16">
+		<failure message="50 != 150" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "/home/vingee/gitrepo/python_example/howto/test_/coverage_/test_app.py", line 31, in test_multiple
+    self.assertEqual(result, 150)
+AssertionError: 50 != 150
+]]>		</failure>
+		<system-out>
+<![CDATA[]]>		</system-out>
+		<system-err>
+<![CDATA[]]>		</system-err>
+	</testcase>
+</testsuite>

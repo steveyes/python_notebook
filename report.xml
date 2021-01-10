@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><testsuite errors="2" failures="0" name="pytest" skipped="0" tests="2" time="0.596"><testcase classname="" file="howto/recusive_dir/bin/membership_test.py" name="howto.recusive_dir.bin.membership_test" time="0.000"><error message="collection failure">howto/recusive_dir/bin/membership_test.py:5: in &lt;module&gt;
+    sys.path.append(&apos;/ebay/cassinfra/lib&apos;)
+E   NameError: name &apos;sys&apos; is not defined</error></testcase><testcase classname="" file="howto/test_/unittest_example/mydict_test.py" name="howto.test_.unittest_example.mydict_test" time="0.000"><error message="collection failure">ImportError while importing test module &apos;/home/vingee/gitrepo/python_example/howto/test_/unittest_example/mydict_test.py&apos;.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+howto/test_/unittest_example/mydict_test.py:3: in &lt;module&gt;
+    from howto.test_.unittest_example import Dict
+E   ImportError: cannot import name &apos;Dict&apos; from &apos;howto.test_.unittest_example&apos; (/home/vingee/gitrepo/python_example/howto/test_/unittest_example/__init__.py)</error></testcase></testsuite>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+    <style>
+        .pagination .page {
+            display: inline-block;
+            padding: 5px;
+            margin: 5px;
+            background-color: cyan;
+        }
+
+        .pagination .page.active {
+            background-color: brown;
+            color: white;
+        }
+    </style>
+</head>
+<ul>
+    {% for item in items %}
+        <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+
+<div class="pagination">
+    {{ page_bar }}
+</div>
+
+</html>
