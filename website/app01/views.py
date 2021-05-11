@@ -1,3 +1,11 @@
+import json
+
+from pathlib import Path
+
+from django.http.multipartparser import FILE
+
+from website.settings import BASE_DIR
+
 from django.shortcuts import render, HttpResponse
 from app01 import models
 from django import forms
@@ -86,3 +94,29 @@ def user_edit(request, nid):
             print(mf.errors.as_json())
         return render(request, 'user_edit.html', {'mf': mf, 'nid': nid})
 
+
+def ajax(request):
+    return render(request, 'ajax.html')
+
+
+def ajax_json(request):
+    ret = {'status': True, 'data': None}
+    return HttpResponse(json.dumps(ret))
+
+
+def upload(request):
+    return render(request, 'upload.html')
+
+
+def upload_file(request):
+    username = request.POST.get('username')
+    fafafa = request.FILES.get('fafafa')
+
+    path = Path(BASE_DIR, 'upload', fafafa.name).resolve()
+    print(path)
+    with open(path, 'wb') as f:
+        for i in fafafa.chunks():
+            f.write(i)
+
+    to_return = {'code': True, 'data': str(path)}
+    return HttpResponse(json.dumps(to_return))

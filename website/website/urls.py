@@ -15,11 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path
-from app01 import views as app01v
+from app01 import views as app01
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', app01v.index),
-    path('user_list/', app01v.user_list),
-    re_path('user_edit/(\d)/', app01v.user_edit),
+    path('index/', app01.index),
+    path('user_list/', app01.user_list),
+    re_path('user_edit/(\d)/', app01.user_edit),
+    re_path('^ajax/$', app01.ajax),
+    re_path('^ajax_json/$', app01.ajax_json),
+    re_path('^upload/$', app01.upload),
+    re_path('^upload_file/$', app01.upload_file),
+
+
 ]
