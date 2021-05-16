@@ -2,16 +2,19 @@ from django.db import models
 
 
 # Create your models here.
-class UserType(models.Model):
-    caption = models.CharField(max_length=32)
+
+class Category(models.Model):
+    caption = models.CharField(max_length=16)
 
 
-class UserGroup(models.Model):
-    name = models.CharField(max_length=32)
+class ArticleType(models.Model):
+    caption = models.CharField(max_length=16)
 
 
-class UserInfo(models.Model):
-    username = models.CharField(max_length=32)
-    email = models.EmailField()
-    user_type = models.ForeignKey(to='UserType', to_field='id', on_delete=models.CASCADE)
-    m2m_usergroup = models.ManyToManyField(UserGroup)
+class Article(models.Model):
+    title = models.CharField(max_length=32)
+    content = models.CharField(max_length=255)
+
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    article_type = models.ForeignKey(ArticleType, on_delete=models.CASCADE)
+

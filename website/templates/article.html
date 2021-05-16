@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .condition a {
+            display: inline-block;
+            padding: 3px 5px;
+            border: 1px solid #dddddd;
+            margin: 5px 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="condition">
+    <h1>过滤条件</h1>
+    <div>
+        <a>all</a>
+        {% for row in article_type %}
+            <a>{{ row.caption }}</a>
+        {% endfor %}
+    </div>
+    <div>
+        <a>all</a>
+        {% for row in category %}
+            <a>{{ row.caption }}</a>
+        {% endfor %}
+    </div>
+</div>
+
+<h1>查询结果</h1>
+<ul>
+    {% for row in result %}
+        <li>{{ row.id }} - {{ row.title }}</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
